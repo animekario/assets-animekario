@@ -345,6 +345,7 @@
             if (!data) return alert(`Cannot get Content!`)
             const tbody = document.querySelector(`.listing table tbody`)
             data.forEach(item => {
+                if (item.name === `index.html`) return
                 const tr = document.createElement(`tr`)
                 const tdName = document.createElement(`td`)
                 tdName.classList.add(`name`)
@@ -362,7 +363,7 @@
                 svg.appendChild(path)
                 const a = document.createElement(`a`)
                 a.setAttribute(`rel`, `nofollow`)
-                a.setAttribute(`href`, `/${item.name}/`)
+                a.setAttribute(`href`, `./${item.path}`)
                 a.innerText = item.name
                 tdName.appendChild(svg)
                 tdName.appendChild(a)
