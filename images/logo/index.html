@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="AnimeKario CDN files">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AnimeKario CDN files</title>
+    <style>
+        body {
+            font: 15px/1.4em Arial, "Helvetica Neue", Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px 20px 30px;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 10px 0;
+            background-color: #fff;
+        }
+
+        .header {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            font-size: 28px;
+            line-height: 38px;
+            margin: 0 0 15px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .versions {
+            max-width: 400px;
+            padding: 2px 12px 2px 6px;
+        }
+
+        .description {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .path {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 15px 0 0;
+            padding: 15px 0 30px;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .path .versions,
+        .path ol {
+            margin: 15px 0 0;
+        }
+
+        .path ol {
+            padding: 0;
+            list-style: none;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .path ol li {
+            display: inline;
+        }
+
+        .listing {
+            border: 1px solid #dfe3e7;
+            border-radius: 6px;
+            -webkit-box-shadow: 0 5px 10px -5px #dfe3e7;
+            box-shadow: 0 5px 10px -5px #dfe3e7;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 0;
+        }
+
+        th,
+        td {
+            padding: 8px 20px;
+            border-bottom: 1px solid #dfe3e7;
+        }
+
+        tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .name.level-up {
+            border-bottom: 1px solid #dfe3e7;
+        }
+
+        .name.level-up a {
+            padding-left: 0;
+        }
+
+        .name {
+            width: auto;
+            text-align: left;
+            padding-right: 20px;
+        }
+
+        .name a {
+            color: #17233b;
+            padding-left: 5px;
+            position: relative;
+        }
+
+        .name svg {
+            display: inline-block;
+            margin-bottom: -4px;
+        }
+
+        .size {
+            max-width: 80px;
+            text-align: right;
+            color: #444;
+        }
+
+        th.name,
+        th.size {
+            color: #999;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        a {
+            color: #ff3ff9;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus {
+            color: #ff3ff9;
+            text-decoration: underline;
+        }
+
+        .landing {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .landing p {
+            margin: 0 0 15px;
+        }
+
+        .landing a {
+            display: block;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        footer {
+            max-width: 960px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            margin: 0 auto;
+            padding: 20px 0 0 0;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid #edf0f2;
+        }
+
+        .footer-left,
+        .footer-right {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 115px;
+        }
+
+        .copyright {
+            color: #79849a;
+            margin: 0;
+        }
+
+        @media (min-width: 576px) {
+
+            .footer-left,
+            .footer-right {
+                -ms-flex-pack: distribute;
+                justify-content: space-around;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+            }
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding-top: 40px;
+            }
+
+            footer {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                padding-top: 30px;
+            }
+
+            .container {
+                padding-bottom: 20px;
+            }
+
+            .footer-right a:first-child,
+            .logo {
+                margin-right: 20px;
+            }
+
+            .landing {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: flex-start;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                margin-top: 40px;
+            }
+
+            .landing .right {
+                text-align: right;
+            }
+        }
+
+        .select-css {
+            display: block;
+            padding: 8px 20px 8px 12px;
+            box-sizing: border-box;
+            margin: 0;
+            border: 1px solid #aaa;
+            border-radius: .5em;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: #fff;
+            background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/icons/caret-down-fill.svg');
+            background-repeat: no-repeat, repeat;
+            background-position: right 8px top 50%, 0 0;
+            background-size: 10px auto, 100%;
+            outline: none;
+        }
+
+        .select-css::-ms-expand {
+            display: none;
+        }
+
+        .select-css:hover {
+            border-color: #888;
+        }
+
+        .select-css option {
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AnimeKario CDN files</h1>
+        </div>
+
+
+        <!-- <div class="path">
+				<ol itemscope itemtype="https://schema.org/BreadcrumbList">
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+						<span itemprop="name">AnimeKario</span>
+						<meta itemprop="position" content="0">
+					</li>
+				</ol>
+
+			</div> -->
+
+        <div class="listing">
+            <table>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-left">
+
+            <p class="copyright">&copy; AnimeKario, 2022</p>
+        </div>
+    </footer>
+
+    <script>
+        async function getContent() {
+            const path = window.location.pathname.replace("index.html", "")
+            const data = await fetch(`https://api.github.com/repos/animekario/assets-animekario/contents${path}`).then(r => r.json()).catch(e => null)
+            if (!data) return alert(`Cannot get Content!`)
+            const tbody = document.querySelector(`.listing table tbody`)
+            data.forEach(item => {
+                const tr = document.createElement(`tr`)
+                const tdName = document.createElement(`td`)
+                tdName.classList.add(`name`)
+                const tdSize = document.createElement(`td`)
+                tdSize.classList.add(`size`)
+                const svg = document.createElement(`svg`)
+                svg.setAttribute(`width`, `20`)
+                svg.setAttribute(`height`, `20`)
+                svg.setAttribute(`viewBox`, `0 0 20 20`)
+                svg.setAttribute(`fill`, `none`)
+                svg.setAttribute(`xmlns`, `http://www.w3.org/2000/svg`)
+                const path = document.createElement(`path`)
+                path.setAttribute(`d`, `M2 5C2 3.89543 2.89543 3 4 3H8.46482C8.79917 3 9.1114 3.1671 9.29687 3.4453L10.7031 5.5547C10.8886 5.8329 11.2008 6 11.5352 6H16C17.1046 6 18 6.89543 18 8V15C18 16.1046 17.1046 17 16 17H4C2.89543 17 2 16.1046 2 15V5Z`)
+                path.setAttribute(`fill`, `#5C667A`)
+                svg.appendChild(path)
+                const a = document.createElement(`a`)
+                a.setAttribute(`rel`, `nofollow`)
+                a.setAttribute(`href`, `/${item.name}/`)
+                a.innerText = item.name
+                tdName.appendChild(svg)
+                tdName.appendChild(a)
+                tdSize.innerText = item.size
+                tr.appendChild(tdName)
+                tr.appendChild(tdSize)
+                tbody.appendChild(tr)
+            })
+        }
+        getContent()
+    </script>
+</body>
+
+</html>
